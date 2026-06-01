@@ -21,32 +21,29 @@
             padding: 60px 20px;
         }
 
-        .quokka-photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid white;
-            margin-bottom: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
         header h1 {
             margin: 10px 0;
             font-size: 2.2em;
             letter-spacing: 3px;
         }
 
-        header p {
-            margin: 0;
-            font-size: 1.1em;
-            opacity: 0.9;
-        }
-
         .container {
             max-width: 800px;
-            margin: 50px auto;
-            padding: 0 30px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .quokka-profile {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 50%;
+            border: 8px solid white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .intro-card {
@@ -57,31 +54,34 @@
             text-align: center;
         }
 
-        h2 {
-            color: #8fa380;
-            font-size: 1.6em;
-            margin-bottom: 20px;
+        .folder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
         }
 
-        .bio-text {
-            font-size: 1.1em;
-            text-align: justify;
-            margin-bottom: 30px;
-        }
-
-        .hobby-tags {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .tag {
-            background-color: #efeae4;
-            padding: 6px 18px;
-            border-radius: 20px;
-            font-size: 0.9em;
+        .folder-item {
+            background: #f4f1eb;
+            padding: 20px;
+            border-radius: 15px;
+            text-decoration: none;
             color: #7d6e5d;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .folder-item:hover {
+            background: #9cb08c;
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 2em;
+            display: block;
+            margin-bottom: 10px;
         }
 
         footer {
@@ -95,25 +95,30 @@
 <body>
 
     <header>
-        <img src="assets/images/quokka-profile.jpg" alt="Quokka Coco" class="quokka-photo">
         <h1>Quokka Coco</h1>
         <p>Stay Happy, Stay Curious</p>
     </header>
 
     <div class="container">
         <div class="intro-card">
+            <img src="assets/images/quokka.jpg" alt="Cute Quokka" class="quokka-profile">
+            
             <h2>About Me</h2>
-            <div class="bio-text">
-                嗨！我是 Coco。這是一個像矮袋鼠口袋一樣溫暖的小空間。<br>
-                我喜歡蒐集生活中的美好瞬間，無論是旅行的足跡、閱讀的心得，或是任何讓生活變得更有趣的小事。我深信保持微笑和好奇心，是探索這個世界最棒的方式。歡迎來到我的小天地，一起發現更多有趣的故事！
-            </div>
+            <p>嗨！我是 Coco。這是一個像矮袋鼠口袋一樣溫暖的小空間。我喜歡蒐集生活中的美好瞬間，保持微笑和好奇心，探索這個世界。</p>
 
-            <div class="hobby-tags">
-                <span class="tag"># 冒險</span>
-                <span class="tag"># 永續生活</span>
-                <span class="tag"># 攝影</span>
-                <span class="tag"># 探索</span>
-                <span class="tag"># 矮袋鼠精神</span>
+            <div class="folder-grid">
+                <a href="assets/images/" class="folder-item">
+                    <span class="icon">🖼️</span> 圖片牆
+                </a>
+                <a href="assets/music/" class="folder-item">
+                    <span class="icon">🎵</span> 聽音樂
+                </a>
+                <a href="assets/videos/" class="folder-item">
+                    <span class="icon">🎥</span> 看影片
+                </a>
+                <a href="#" class="folder-item">
+                    <span class="icon">📂</span> 其他物件
+                </a>
             </div>
         </div>
     </div>
